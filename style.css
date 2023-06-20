@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* Colors */
+    --moderate-violet:263 55% 52%;
+    --very-dark-grayish:217 19% 35%;
+    --very-dark-blackish:219 29% 14%;
+    --white:0 0% 100%;
+    --light-gray:0 0% 81%;
+    --light-grayish-blue:210 46% 95%;
+    /*Fonts */
+    --ff-primary: 'Barlow Semi Condensed', sans-serif;
+
+    --fw-400: 500;
+    --fw-700: 600;
+  
+    --fs-300: 0.6875rem;
+    --fs-400: 0.8125rem;
+    --fs-500: 1.25rem;
+
+    --margin-bottom:.6rem
+    
+}
+.bg-violet{background-color: hsl(var(--moderate-violet))}
+.bg-dark-grayish-blue{background-color: hsl(var(--very-dark-grayish))}
+.bg-dark-blackish{background-color: hsl(var(--very-dark-blackish))}
+.bg-white{background-color: hsl(var(--white))}
+
+.bg-light-gray{background-color: hsl(var(--light-gray));}
+.bg-light-grayish-blue{background-color: hsl(var(--light-grayish-blue))}
+
+
+.clr-white{color:hsl(var(--white))}
+.clr-white-5{color:hsl(var(--white)/.5)}
+.clr-white-7{color:hsl(var(--white)/.7)}
+
+.clr-blackish{color: hsl(var(--very-dark-blackish));}
+.clr-blackish-5{color: hsl(var(--very-dark-blackish) /.5);}
+.clr-blackish-7{color: hsl(var(--very-dark-blackish) /.7);}
+
+.quote-background{
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 75% 0%;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-400);
+    background-color: hsl(var(--light-gray));
+}
+article{
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+.testimonial{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns:repeat(4,1fr) ;
+    padding-block: 2rem;
+    width: min(95%,70rem);
+    margin-inline: auto;
+
+}
+.testimonial article:nth-child(5){
+    grid-column-start: 4 ;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.grid-span-2{
+    grid-column:span 2;
+}
+.testimonial h2{
+    font-size: var(--fs-500);
+    margin-bottom: var(--margin-bottom)
+}
+.testimonial p{
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    line-height: 1.5rem;
+}
+.writer-info{
+    display: flex;
+    align-items: center;
+    gap:.6rem;
+    margin-bottom: var(--margin-bottom)
+}
+.writer-info img{
+    display: block;
+    border-radius: 50%;    
+}
+.writer-info h4{
+    font-size: var(--fs-400);
+}
+
+.writer-info h5{
+    font-size: var(--fs-300);
+    font-weight: var(--fw-400);
+}
+
+
+@media screen and (max-width: 54em) {
+    .testimonial {
+        display: flex;
+        flex-direction: column  ;
+    }
+  }
